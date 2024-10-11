@@ -1,0 +1,590 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css);
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  --bgcolor:linear-gradient(to bottom right,#008cff,#e100ff);
+}
+
+:root {
+  --bgcolor2:linear-gradient(to bottom left,#008cff,#e100ff);
+  --color:chartreuse;
+}
+
+body {
+  background-color: cornflowerblue;
+  font-family: monospace;
+  height: 500vh;
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(115, 113, 113);
+  border-radius: 2rem;
+}
+
+body::-webkit-scrollbar-track {
+  margin-right: 0.2rem;
+  width: 0.3rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.2rem;
+  position: relative;
+}
+
+.logo {
+  margin-top: 0.2rem;
+  padding: 0 2rem;
+}
+.logo h2 {
+  font-size: 2rem;
+}
+.logo h2 a {
+  text-decoration: none;
+}
+.logo h2 a:active {
+  color: aliceblue;
+}
+
+.menu {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.menu2 {
+  position: absolute;
+  margin-top: 0.3rem;
+  margin-right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+  cursor: pointer;
+  z-index: -100;
+  border-radius: 0.1rem;
+  background-color: rgba(122, 126, 126, 0.873);
+  box-shadow: 0.1rem 0.1rem 0.3rem black;
+  padding: 0.1rem 0.2rem;
+}
+.menu2 h2 {
+  font-size: 1.8rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-22%, -5%);
+  margin-bottom: 0.7rem;
+}
+.menu2 hr {
+  margin: 0.35rem 0rem;
+  text-decoration: none;
+  border-color: aliceblue;
+  background-color: aliceblue;
+}
+.menu2 ul {
+  margin-top: 0.7rem;
+  list-style: none;
+  background-color: black;
+  display: none;
+  width: 18rem;
+  margin-left: -16.3rem;
+  border-radius: 0.3rem;
+  border-top-right-radius: 0rem;
+  position: relative;
+}
+.menu2 ul li {
+  position: relative;
+  padding: 0.1rem 1rem;
+  font-size: 1.8rem;
+  margin-top: 0.1rem;
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  padding: 0.2rem 1rem;
+}
+.menu2 ul li:hover {
+  background-color: rgb(5, 5, 5);
+  color: white;
+}
+.menu2 ul li:nth-child(4) {
+  padding-bottom: 0.3rem;
+}
+.menu2 ul li:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: -10%;
+  width: 90%;
+  height: 5%;
+  background-color: aliceblue;
+}
+.menu2 ul li:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: -10%;
+  width: 90%;
+  height: 5%;
+  background-color: aliceblue;
+}
+.menu2 ul li:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: -10%;
+  width: 90%;
+  height: 5%;
+  background-color: aliceblue;
+}
+
+.menu span {
+  text-decoration: none;
+  padding: 0rem 1.5rem;
+  font-weight: 100;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgb(247, 245, 245);
+  font-family: cursive;
+}
+
+.menu span:hover {
+  color: aqua;
+}
+
+.pic img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 24rem;
+  height: 24rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.view {
+  position: relative;
+  top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.view h1 {
+  color: white;
+  font-family: cursive;
+  font-size: 1.9rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+}
+.view .slider {
+  width: 79rem;
+  height: 36rem;
+  background-image: url("https://images.pexels.com/photos/461940/pexels-photo-461940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  box-shadow: 0.1rem 0.1rem 2rem rgba(247, 245, 245, 0.997);
+  border-radius: 2rem;
+  background-size: 100% 100%;
+  animation: slider 10s infinite linear;
+  animation-delay: 2s;
+}
+.view h1 .text {
+  display: flex;
+  font-family: cursive;
+  font-size: 1.9rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  color: rgba(250, 247, 247, 0.757);
+}
+.view h1 .text li {
+  list-style: none;
+  letter-spacing: 1.5rem;
+  animation: thunder 1s infinite linear;
+}
+.view h1 .text li:nth-child(6) {
+  margin-left: 2.5rem;
+}
+.view h1 .text li:nth-child(1) {
+  animation-delay: 0s;
+}
+.view h1 .text li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.view h1 .text li:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.view h1 .text li:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.view h1 .text li:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.view h1 .text li:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.view h1 .text li:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.view h1 .text li:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.view h1 .text li:nth-child(9) {
+  animation-delay: 0.8s;
+}
+@keyframes thunder {
+  0% {
+    color: rgba(249, 249, 249, 0.757);
+    text-shadow: none;
+  }
+  50% {
+    color: rgba(252, 250, 250, 0.757);
+    text-shadow: none;
+  }
+  100% {
+    color: rgb(0, 247, 255);
+    text-shadow: 0.1rem 0.2rem 0.7rem rgb(2, 254, 254);
+  }
+}
+@keyframes slider {
+  0% {
+    background: url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: 100% 100%;
+  }
+  25% {
+    background: url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: 100% 100%;
+  }
+  35% {
+    background: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: 100% 100%;
+  }
+  55% {
+    background: url("https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: 100% 100%;
+  }
+  75% {
+    background: url("https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: 100% 100%;
+  }
+  80% {
+    background: url("https://images.pexels.com/photos/753626/pexels-photo-753626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: 100% 100%;
+  }
+  90% {
+    background: url("https://images.pexels.com/photos/28489253/pexels-photo-28489253/free-photo-of-majestic-snowy-mountain-landscape-in-winter.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-size: 100% 100%;
+  }
+  100% {
+    background: url("https://images.pexels.com/photos/3996534/pexels-photo-3996534.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load");
+    background-size: 100% 100%;
+  }
+}
+
+.contect {
+  position: relative;
+  left: 0%;
+  bottom: -80%;
+  text-align: center;
+}
+.contect h1 {
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-family: cursive;
+}
+.contect iframe {
+  width: 80%;
+  height: 30rem;
+  margin-bottom: 3rem;
+}
+.contect form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rem;
+}
+.contect form #text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+}
+.contect form textarea {
+  margin-left: 0.5rem;
+  padding: 0.2rem;
+  font-size: 1.5rem;
+  width: 27rem;
+  border: 0.1rem solid black;
+  outline: none;
+}
+.contect form label {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: aliceblue;
+  font-family: cursive;
+}
+.contect form input {
+  outline: none;
+  margin-bottom: 1rem;
+  border: 0.1rem solid black;
+  border-radius: 0.1rem;
+  font-size: 1.5rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.2rem;
+  font-family: monospace;
+  caret-color: black;
+}
+.contect form input[type=email] {
+  width: 21rem;
+}
+.contect form input[type=file] {
+  border: none;
+  color: black;
+  margin-left: 3rem;
+}
+.contect form #photo {
+  margin-left: 18rem;
+}
+.contect form button {
+  background-color: white;
+  position: relative;
+  margin-top: 2rem;
+  border: 0.1rem solid black;
+  border-radius: 1rem;
+  padding: 0.4rem 5.8rem;
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 1;
+  cursor: pointer;
+  box-shadow: 0.1rem 0.3rem 0.4rem 0.1rem rgba(0, 0, 0, 0.575);
+  transform: perspective(70rem) translateZ(2rem);
+}
+.contect form button::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 0%;
+  height: 100%;
+  background: var(--bgcolor);
+  border-radius: 1rem 0 0 1rem;
+  z-index: -1;
+  transition: all 0.3s linear;
+}
+.contect form button::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s linear;
+  top: 0%;
+  left: 100%;
+  width: 50%;
+  height: 100%;
+  background: var(--bgcolor2);
+  border-radius: 0 1rem 1rem 0;
+  z-index: -1;
+}
+.contect form button:hover::after {
+  left: 50%;
+}
+.contect form button:hover::before {
+  width: 50%;
+}
+.contect form button:hover {
+  border: 0.1rem solid white;
+  transition: all 0.4s linear;
+  color: white;
+}
+
+input:valid {
+  color: green;
+}
+
+input:invalid {
+  color: red;
+}
+
+.button {
+  z-index: 100;
+  position: fixed;
+  bottom: 5rem;
+  right: 7%;
+  cursor: pointer;
+  padding: 1rem 1.3rem;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(to top, rgb(166, 27, 166), rgb(116, 4, 147));
+  box-shadow: 0.01rem 0.1rem 0.5rem rgba(0, 0, 0, 0.709);
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button i {
+  font-size: 1.5rem;
+  text-shadow: 0.1rem 0rem 0.2rem white;
+  animation: updown 3s infinite linear;
+}
+
+@keyframes updown {
+  0% {
+    translate: 0rem 0rem;
+  }
+  50% {
+    translate: 0rem -0.4rem;
+  }
+  80% {
+    translate: 0rem 0.1rem;
+  }
+  90% {
+    translate: 0rem 0.3rem;
+  }
+  100% {
+    translate: 0rem 0rem;
+  }
+}
+@media (min-width: 425px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+@media (width <= 425px) {
+  html {
+    font-size: 50%;
+  }
+  .pic img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .view .slider {
+    width: 40rem;
+    height: 20rem;
+    box-shadow: 0.1rem 0.1rem 0.9rem white;
+  }
+  .contect form input[type=file] {
+    margin-left: 4rem;
+    width: 27rem;
+  }
+  .contect form #photo {
+    display: flex;
+    flex-direction: row;
+    margin-left: -26rem;
+    width: 15rem;
+  }
+}
+@media (width <= 375px) {
+  .menu {
+    opacity: 0;
+    z-index: -1000;
+  }
+  .menu2 {
+    position: relative;
+    opacity: 1;
+    z-index: 1;
+  }
+  .menu2 ul {
+    display: none;
+  }
+  .view .slider {
+    width: 40rem;
+    height: 20rem;
+    box-shadow: 0.1rem 0.1rem 0.9rem white;
+  }
+  .contect form input[type=file] {
+    margin-left: 4rem;
+    width: 27rem;
+  }
+  .contect form #photo {
+    display: flex;
+    flex-direction: row;
+    margin-left: -26rem;
+    width: 15rem;
+  }
+}
+@media (1023px < width < 1200px) {
+  html {
+    font-size: 106%;
+  }
+  .pic img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .view .slider {
+    width: 50rem;
+    height: 25rem;
+    box-shadow: 0.1rem 0.1rem 0.9rem white;
+  }
+  .contect form input[type=file] {
+    margin-left: 4rem;
+    width: 27rem;
+  }
+  .contect form #photo {
+    display: flex;
+    flex-direction: row;
+    margin-left: -26rem;
+    width: 15rem;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
+  .pic img {
+    width: 30rem;
+    height: 30rem;
+  }
+  .view .slider {
+    width: 70rem;
+    height: 40rem;
+    box-shadow: 0.1rem 0.3rem 1.9rem white;
+  }
+  .contect form input[type=file] {
+    margin-left: 4rem;
+    width: 37rem;
+  }
+  .contect form #photo {
+    display: flex;
+    flex-direction: row;
+    margin-left: -16rem;
+    width: 25rem;
+  }
+}
+@media (min-width: 2000px) {
+  html {
+    font-size: 120%;
+  }
+  .pic img {
+    width: 42rem;
+    height: 42rem;
+  }
+  .view .slider {
+    width: 90rem;
+    height: 60rem;
+    box-shadow: 0.1rem 0.3rem 1.9rem white;
+  }
+  .contect form input[type=file] {
+    margin-left: 4rem;
+    width: 37rem;
+  }
+  .contect form #photo {
+    display: flex;
+    flex-direction: row;
+    margin-left: -16rem;
+    width: 25rem;
+  }
+}/*# sourceMappingURL=index.css.map */
