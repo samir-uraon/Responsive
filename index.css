@@ -52,6 +52,7 @@ nav {
 }
 .logo h2 a {
   text-decoration: none;
+  color:aliceblue;
 }
 .logo h2 a:active {
   color: aliceblue;
@@ -195,8 +196,8 @@ nav {
   box-shadow: 0.1rem 0.1rem 2rem rgba(247, 245, 245, 0.997);
   border-radius: 2rem;
   background-size: 100% 100%;
-  animation: slider 10s infinite linear;
-  animation-delay: 2s;
+  animation: slider 15s infinite linear;
+  animation-delay: 4s;
 }
 .view h1 .text {
   display: flex;
